@@ -1,7 +1,9 @@
 {
   "total_entries": 9115,
+  "retrieval_timestamp_utc": "2026-11-22T22:12:38.267306+00:00",
+  "uniprot_release": "2026_04",
   "signal_annotated": 653,
-  "ec_3_2_1_entries": 108,
+  "complete_ec_3_2_1": 108,
   "candidate_entries": 69,
   "candidate_reviewed": 4,
   "candidate_signal_evidence_groups": {
@@ -35,38 +37,55 @@
       "protein_name": "chitinase"
     }
   ],
+  "ec_no_signal_transmembrane_feature_count": 4,
+  "candidate_tm_outside_signal": 4,
   "incomplete_ec_3_2_1_entries": 11,
-  "signal_annotated_post_signal_calculated": 653,
-  "candidate_post_signal_calculated": 69,
-  "candidate_median_post_signal_pi_shift": -0.074,
-  "signal_group_full_length_pi": {
+  "full_length_properties_calculated": 9114,
+  "candidates_with_post_signal_properties": 69,
+  "candidate_post_signal_pi_shift_median": -0.074,
+  "signal_full_length_pi": {
     "n_valid": 653,
     "median": 5.403,
     "q1": 4.836,
     "q3": 6.353
   },
-  "no_signal_group_full_length_pi": {
+  "no_signal_full_length_pi": {
     "n_valid": 8461,
     "median": 6.366,
     "q1": 5.585,
     "q3": 8.719
   },
-  "signal_group_length_aa": {
+  "signal_length_aa": {
     "n_valid": 653,
     "median": 391.0,
     "q1": 241.0,
     "q3": 545.0
   },
-  "no_signal_group_length_aa": {
+  "no_signal_length_aa": {
     "n_valid": 8462,
     "median": 412.0,
     "q1": 264.0,
     "q3": 607.0
   },
+  "mann_whitney_full_length_pi": {
+    "method": "two-sided_asymptotic",
+    "n_signal": 653,
+    "n_no_signal": 8461,
+    "u": 1583906.5,
+    "p_value": 5.817204160129713e-74,
+    "rank_biserial": -0.4266
+  },
+  "mann_whitney_length": {
+    "method": "two-sided_asymptotic",
+    "n_signal": 653,
+    "n_no_signal": 8462,
+    "u": 2537799.5,
+    "p_value": 0.0005138090519349187,
+    "rank_biserial": -0.0815
+  },
   "longest_record": {
     "accession": "G0RTM6",
-    "length_aa": "20873",
+    "length_aa": 20873,
     "protein_name": "Carrier domain-containing protein"
-  },
-  "interpretation": "Annotation screen only; signal feature and EC do not verify secretion or activity."
+  }
 }

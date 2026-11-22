@@ -1,0 +1,74 @@
+{
+  "reference_count": 5,
+  "resolved": 5,
+  "passed_primary_screen": 2,
+  "not_found_or_ambiguous": 0,
+  "results": [
+    {
+      "reference": "CBH I (Cel7A)",
+      "expected_role": "positive-reference",
+      "accession": "G0RVK1",
+      "gene_name": "cel7a",
+      "match_method": "accession",
+      "match_status": "matched",
+      "signal_annotated": true,
+      "complete_ec_3_2_1": false,
+      "primary_screen_pass": false,
+      "ec_numbers": "3.2.1.-",
+      "interpretation": "Not selected by strict EC/signal annotation criteria; does not disprove secretion"
+    },
+    {
+      "reference": "CBH II (Cel6A, UniRef-linked)",
+      "expected_role": "positive-reference",
+      "accession": "G0RB58",
+      "gene_name": "",
+      "match_method": "accession",
+      "match_status": "matched",
+      "signal_annotated": true,
+      "complete_ec_3_2_1": false,
+      "primary_screen_pass": false,
+      "ec_numbers": "3.2.1.-",
+      "interpretation": "Not selected by strict EC/signal annotation criteria; does not disprove secretion"
+    },
+    {
+      "reference": "Endoglucanase II (Cel5A)",
+      "expected_role": "positive-reference",
+      "accession": "G0RB67",
+      "gene_name": "cel5a",
+      "match_method": "accession",
+      "match_status": "matched",
+      "signal_annotated": true,
+      "complete_ec_3_2_1": true,
+      "primary_screen_pass": true,
+      "ec_numbers": "3.2.1.4",
+      "interpretation": "Passes both annotation criteria"
+    },
+    {
+      "reference": "Xylanase II (Xyn2)",
+      "expected_role": "positive-reference",
+      "accession": "G0RUP7",
+      "gene_name": "xyn2",
+      "match_method": "accession",
+      "match_status": "matched",
+      "signal_annotated": true,
+      "complete_ec_3_2_1": true,
+      "primary_screen_pass": true,
+      "ec_numbers": "3.2.1.8",
+      "interpretation": "Passes both annotation criteria"
+    },
+    {
+      "reference": "eIF5A comparison",
+      "expected_role": "comparison",
+      "accession": "G0RKY3",
+      "gene_name": "",
+      "match_method": "accession",
+      "match_status": "matched",
+      "signal_annotated": false,
+      "complete_ec_3_2_1": false,
+      "primary_screen_pass": false,
+      "ec_numbers": "",
+      "interpretation": "Not selected by strict EC/signal annotation criteria; does not disprove secretion"
+    }
+  ],
+  "note": "Targeted illustrative inspection, not independent sensitivity validation."
+}

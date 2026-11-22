@@ -1,0 +1,6 @@
+reference,expected_role,accession,gene_name,match_method,match_status,signal_annotated,complete_ec_3_2_1,primary_screen_pass,ec_numbers,interpretation
+CBH I (Cel7A),positive-reference,G0RVK1,cel7a,accession,matched,True,False,False,3.2.1.-,Not selected by strict EC/signal annotation criteria; does not disprove secretion
+"CBH II (Cel6A, UniRef-linked)",positive-reference,G0RB58,,accession,matched,True,False,False,3.2.1.-,Not selected by strict EC/signal annotation criteria; does not disprove secretion
+Endoglucanase II (Cel5A),positive-reference,G0RB67,cel5a,accession,matched,True,True,True,3.2.1.4,Passes both annotation criteria
+Xylanase II (Xyn2),positive-reference,G0RUP7,xyn2,accession,matched,True,True,True,3.2.1.8,Passes both annotation criteria
+eIF5A comparison,comparison,G0RKY3,,accession,matched,False,False,False,,Not selected by strict EC/signal annotation criteria; does not disprove secretion

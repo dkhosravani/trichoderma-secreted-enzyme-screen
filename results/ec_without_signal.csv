@@ -1,0 +1,40 @@
+uniprot_accession,gene_name,protein_name,reviewed,signal_peptide_annotated,signal_evidence_codes,signal_evidence_sources,signal_evidence_group,signal_end_aa,signal_location_status,transmembrane_annotated,tm_outside_signal_status,ec_numbers,glycosidase_ec_3_2_1,incomplete_ec_3_2_1,length_aa,calculated_mw_kda,calculated_pi,property_status,post_signal_length_aa,post_signal_mw_kda,post_signal_pi,post_signal_status
+G0R6Z3,,"mannan endo-1,6-alpha-mannosidase",False,False,,,no_signal_annotation,,no_signal_annotation,True,signal_coordinates_unknown,3.2.1.101,True,False,432,47.807,4.8,ok,,,,not_calculated:no_signal_annotation
+G0R9W7,,"Mannan endo-1,6-alpha-mannosidase",False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.101,True,False,476,51.332,4.812,ok,,,,not_calculated:no_signal_annotation
+G0RA95,,Mannosyl-oligosaccharide glucosidase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.106,True,False,1014,118.576,5.476,ok,,,,not_calculated:no_signal_annotation
+G0RBU1,,Glycogen debranching enzyme,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,2.4.1.25; 3.2.1.33,True,False,1557,176.006,5.882,ok,,,,not_calculated:no_signal_annotation
+G0RC60,,chitinase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.14,True,False,820,89.114,6.323,ok,,,,not_calculated:no_signal_annotation
+G0RCW5,,Beta-mannosidase B,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.25,True,False,894,100.575,5.39,ok,,,,not_calculated:no_signal_annotation
+G0RD31,cel1a,beta-glucosidase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.21,True,False,466,52.24,5.334,ok,,,,not_calculated:no_signal_annotation
+G0RE20,,Trehalase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.28,True,False,741,85.009,5.994,ok,,,,not_calculated:no_signal_annotation
+G0REU2,chi18-2,chitinase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.14,True,False,355,39.429,6.6,ok,,,,not_calculated:no_signal_annotation
+G0RF17,,"xylan 1,4-beta-xylosidase",False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.37,True,False,796,84.54,5.381,ok,,,,not_calculated:no_signal_annotation
+G0RF47,,"endo-1,3(4)-beta-glucanase",False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.6,True,False,291,30.848,4.328,ok,,,,not_calculated:no_signal_annotation
+G0RFE9,,chitinase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.14,True,False,369,38.56,4.882,ok,,,,not_calculated:no_signal_annotation
+G0RFG3,,Alpha-mannosidase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.24,True,False,1077,122.028,6.113,ok,,,,not_calculated:no_signal_annotation
+G0RFL5,,"glucan endo-1,3-beta-D-glucosidase",False,False,,,no_signal_annotation,,no_signal_annotation,True,signal_coordinates_unknown,3.2.1.39,True,False,591,63.086,4.802,ok,,,,not_calculated:no_signal_annotation
+G0RFU6,,Probable beta-glucosidase H,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.21,True,False,700,77.089,6.019,ok,,,,not_calculated:no_signal_annotation
+G0RGL2,chi18-rel2,chitinase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.14,True,False,340,38.04,5.489,ok,,,,not_calculated:no_signal_annotation
+G0RGP9,,beta-glucosidase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.21,True,False,814,88.114,5.104,ok,,,,not_calculated:no_signal_annotation
+G0RGZ7,,cellulase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.4,True,False,328,35.475,4.609,ok,,,,not_calculated:no_signal_annotation
+G0RH13,,alpha-glucosidase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.20,True,False,846,94.191,5.778,ok,,,,not_calculated:no_signal_annotation
+G0RH32,,"endo-1,3(4)-beta-glucanase",False,False,,,no_signal_annotation,,no_signal_annotation,True,signal_coordinates_unknown,3.2.1.6,True,False,375,40.804,5.01,ok,,,,not_calculated:no_signal_annotation
+G0RIF5,cel1b,beta-glucosidase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.21,True,False,484,55.081,5.479,ok,,,,not_calculated:no_signal_annotation
+G0RJY3,,Beta-mannosidase B,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.25,True,False,854,97.436,5.242,ok,,,,not_calculated:no_signal_annotation
+G0RK12,chi18-3,chitinase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.14,True,False,357,38.727,6.41,ok,,,,not_calculated:no_signal_annotation
+G0RLL5,,"Probable glucan endo-1,3-beta-glucosidase eglC",False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.39,True,False,413,42.217,4.479,ok,,,,not_calculated:no_signal_annotation
+G0RN95,,"glucan 1,3-beta-glucosidase",False,False,,,no_signal_annotation,,no_signal_annotation,True,signal_coordinates_unknown,3.2.1.58,True,False,715,82.121,9.032,ok,,,,not_calculated:no_signal_annotation
+G0RNT8,,"glucan endo-1,3-beta-D-glucosidase",False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.39,True,False,712,79.55,6.841,ok,,,,not_calculated:no_signal_annotation
+G0RNX8,,"alpha,alpha-trehalase",False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.28,True,False,937,104.062,5.582,ok,,,,not_calculated:no_signal_annotation
+G0RPD3,chi18-rel1,chitinase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.14,True,False,344,37.615,4.507,ok,,,,not_calculated:no_signal_annotation
+G0RQH3,,chitinase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.14,True,False,290,31.541,4.473,ok,,,,not_calculated:no_signal_annotation
+G0RRL7,,beta-glucosidase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.21,True,False,890,96.525,5.967,ok,,,,not_calculated:no_signal_annotation
+G0RSR0,,ADP-ribosylhydrolase ARH3,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.143,True,False,705,76.572,5.401,ok,,,,not_calculated:no_signal_annotation
+G0RT80,,"Mannan endo-1,6-alpha-mannosidase",False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.101,True,False,433,45.351,5.127,ok,,,,not_calculated:no_signal_annotation
+G0RUB2,chi18-7,chitinase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.14,True,False,397,44.566,5.18,ok,,,,not_calculated:no_signal_annotation
+G0RVQ5,,alpha-galactosidase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.22,True,False,446,48.32,4.692,ok,,,,not_calculated:no_signal_annotation
+G0RVU8,,Beta-mannosidase A,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.25,True,False,902,101.784,5.39,ok,,,,not_calculated:no_signal_annotation
+G0RW03,,alpha-D-xyloside xylohydrolase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.177,True,False,767,86.259,5.553,ok,,,,not_calculated:no_signal_annotation
+G0RW11,,alpha-galactosidase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.22,True,False,405,43.623,4.463,ok,,,,not_calculated:no_signal_annotation
+G0RWC1,cel3c,beta-glucosidase,False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.21,True,False,834,90.973,5.473,ok,,,,not_calculated:no_signal_annotation
+G0RWY3,,"Endo-1,4-beta-xylanase",False,False,,,no_signal_annotation,,no_signal_annotation,False,no_tm_feature,3.2.1.8,True,False,152,16.103,4.446,ok,,,,not_calculated:no_signal_annotation

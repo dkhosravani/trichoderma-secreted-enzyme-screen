@@ -1,70 +1,70 @@
-uniprot_accession,gene_name,protein_name,reviewed,signal_peptide_annotated,signal_evidence_codes,signal_evidence_sources,signal_evidence_group,signal_end_aa,signal_location_status,transmembrane_annotated,ec_numbers,glycosidase_ec_3_2_1,incomplete_ec_3_2_1,length_aa,calculated_mw_kda,calculated_pi,property_status,post_signal_length_aa,post_signal_mw_kda,post_signal_pi,post_signal_status
-G0R6S5,chi18-1,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,25,valid_annotated_coordinates,False,3.2.1.14,True,False,1377,146.509,4.68,ok,1352,144.038,4.664,ok
-G0R7M8,chi18-12,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,False,3.2.1.14,True,False,324,35.032,4.17,ok,305,33.24,4.17,ok
-G0R866,,Glucoamylase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,20,valid_annotated_coordinates,False,3.2.1.3,True,False,632,67.372,5.11,ok,612,65.368,4.978,ok
-G0R947,,"Endo-1,4-beta-xylanase 1",True,True,ECO:0000255,,ECO:0000255_only,19,valid_annotated_coordinates,False,3.2.1.8,True,False,229,24.583,5.003,ok,210,22.701,5.003,ok
-G0R949,,endo-polygalacturonase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,21,valid_annotated_coordinates,False,3.2.1.15,True,False,379,38.342,5.918,ok,358,36.187,5.507,ok
-G0R9G0,chi18-13,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,26,valid_annotated_coordinates,False,3.2.1.14,True,False,401,41.038,4.597,ok,375,38.354,4.423,ok
-G0RA32,xyn3,"Endo-1,4-beta-xylanase 3",True,True,ECO:0000255,,ECO:0000255_only,16,valid_annotated_coordinates,False,3.2.1.8,True,False,347,38.076,6.966,ok,331,36.453,6.593,ok
-G0RA39,,non-reducing end alpha-L-arabinofuranosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,26,valid_annotated_coordinates,False,3.2.1.55,True,False,510,53.127,5.691,ok,484,50.463,5.296,ok
-G0RA70,,alpha-galactosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,26,valid_annotated_coordinates,False,3.2.1.22,True,False,476,52.124,6.107,ok,450,49.573,5.787,ok
-G0RA73,,Alpha-galactosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,False,3.2.1.22,True,False,496,54.33,5.407,ok,477,52.281,5.324,ok
-G0RAJ4,,"N,O-diacetylmuramidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,20,valid_annotated_coordinates,False,3.2.1.17,True,False,228,24.265,5.87,ok,208,22.248,5.583,ok
-G0RB67,cel5a,Endoglucanase EG-II,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,21,valid_annotated_coordinates,False,3.2.1.4,True,False,418,44.154,4.955,ok,397,42.141,4.834,ok
-G0RBA1,chit18-11,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,18,valid_annotated_coordinates,False,3.2.1.14,True,False,376,41.485,4.636,ok,358,39.782,4.637,ok
-G0RC44,,Alpha-galactosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,27,valid_annotated_coordinates,False,3.2.1.22,True,False,444,48.535,5.067,ok,417,45.694,4.889,ok
-G0RC85,man5a,"Mannan endo-1,4-beta-mannosidase A",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,25,valid_annotated_coordinates,False,3.2.1.78,True,False,369,40.174,5.118,ok,344,37.725,4.881,ok
-G0RCS3,chi18-6,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,18,valid_annotated_coordinates,False,3.2.1.14,True,False,492,54.207,5.177,ok,474,52.269,5.068,ok
-G0RDP2,nag1,Beta-hexosaminidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,21,valid_annotated_coordinates,False,3.2.1.52,True,False,582,64.26,5.827,ok,561,62.164,5.743,ok
-G0RDY1,,beta-glucosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,False,3.2.1.21,True,False,781,84.681,5.317,ok,762,82.721,5.273,ok
-G0RE86,,"glucan endo-1,6-beta-glucosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,28,valid_annotated_coordinates,False,3.2.1.75,True,False,490,51.963,4.678,ok,462,49.115,4.521,ok
-G0REY3,,Alpha-L-arabinofuranosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,False,3.2.1.55,True,False,322,34.776,6.402,ok,303,32.832,6.462,ok
-G0RF07,,Beta-glucosidase cel3A,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,26,valid_annotated_coordinates,False,3.2.1.21,True,False,765,83.003,6.037,ok,739,80.402,6.041,ok
-G0RFP4,,beta-N-acetylhexosaminidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,16,valid_annotated_coordinates,False,3.2.1.52,True,False,684,74.344,5.779,ok,668,72.63,5.649,ok
-G0RFR8,,Alpha-amylase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,False,3.2.1.1,True,False,463,50.517,4.682,ok,444,48.367,4.585,ok
-G0RG23,,"xylan 1,4-beta-xylosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,20,valid_annotated_coordinates,False,3.2.1.37,True,False,797,87.19,5.524,ok,777,85.269,5.526,ok
-G0RG24,cel3a,Beta-glucosidase cel3A,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,False,3.2.1.21,True,False,744,78.432,6.382,ok,725,76.441,5.969,ok
-G0RG35,,alpha-galactosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,20,valid_annotated_coordinates,False,3.2.1.22,True,False,621,68.001,6.453,ok,601,66.073,6.437,ok
-G0RG36,,Beta-mannosidase A,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,17,valid_annotated_coordinates,False,3.2.1.25,True,False,927,104.831,5.707,ok,910,103.067,5.652,ok
-G0RGE0,,"glucan endo-1,3-alpha-glucosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,25,valid_annotated_coordinates,False,3.2.1.59,True,False,429,46.805,5.436,ok,404,44.318,5.432,ok
-G0RGK8,,alpha-glucosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,30,valid_annotated_coordinates,False,3.2.1.20,True,False,964,109.848,5.605,ok,934,106.644,5.539,ok
-G0RH14,,Exo-beta-D-glucosaminidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,18,valid_annotated_coordinates,False,3.2.1.165,True,False,892,99.427,5.862,ok,874,97.788,5.865,ok
-G0RHB8,chi18-15,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,25,valid_annotated_coordinates,False,3.2.1.14,True,False,343,36.182,4.815,ok,318,33.663,4.797,ok
-G0RHL2,,"glucan endo-1,3-beta-D-glucosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,18,valid_annotated_coordinates,False,3.2.1.39,True,False,863,92.095,6.004,ok,845,90.4,6.011,ok
-G0RHR0,,Mannosyl-oligosaccharide glucosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,20,valid_annotated_coordinates,False,3.2.1.106,True,False,815,92.204,5.062,ok,795,90.36,5.036,ok
-G0RJ07,cel3b,Beta-glucosidase cel3A,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,18,valid_annotated_coordinates,False,3.2.1.21,True,False,874,93.913,5.726,ok,856,92.154,5.725,ok
-G0RK71,,"mannan endo-1,4-beta-mannosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,23,valid_annotated_coordinates,False,3.2.1.78,True,False,481,51.355,5.382,ok,458,49.057,5.237,ok
-G0RKU0,chi18-4,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,22,valid_annotated_coordinates,False,3.2.1.14,True,False,393,44.174,4.8,ok,371,41.758,4.761,ok
-G0RME4,,"Mannan endo-1,6-alpha-mannosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,21,valid_annotated_coordinates,True,3.2.1.101,True,False,460,49.429,5.054,ok,439,47.46,4.959,ok
-G0RMH1,,Probable beta-glucosidase btgE,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,False,3.2.1.21,True,False,554,56.908,4.721,ok,535,55.246,4.671,ok
-G0RN13,,"Mannan endo-1,6-alpha-mannosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,True,3.2.1.101,True,False,463,50.793,5.104,ok,444,48.631,5.162,ok
-G0RN27,,"xylan 1,4-beta-xylosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,22,valid_annotated_coordinates,False,3.2.1.37,True,False,927,100.985,6.354,ok,905,98.588,6.183,ok
-G0RNW1,,"glucan endo-1,6-beta-glucosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,17,valid_annotated_coordinates,False,3.2.1.75,True,False,429,48.079,5.45,ok,412,46.345,5.344,ok
-G0RP66,,cellulase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,17,valid_annotated_coordinates,False,3.2.1.4,True,False,242,24.411,4.206,ok,225,22.799,4.063,ok
-G0RQ44,,Alpha-galactosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,18,valid_annotated_coordinates,False,3.2.1.22,True,False,496,54.902,5.395,ok,478,53.191,5.388,ok
-G0RQN9,,Beta-galactosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,20,valid_annotated_coordinates,False,3.2.1.23,True,False,1023,111.367,6.353,ok,1003,109.286,6.347,ok
-G0RRB2,,non-reducing end alpha-L-arabinofuranosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,21,valid_annotated_coordinates,False,3.2.1.55,True,False,500,51.115,6.051,ok,479,49.159,5.893,ok
-G0RRG0,,Trehalase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,25,valid_annotated_coordinates,False,3.2.1.28,True,False,686,76.901,6.296,ok,661,74.36,6.21,ok
-G0RRG8,cel12a,cellulase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,16,valid_annotated_coordinates,False,3.2.1.4,True,False,234,25.158,6.694,ok,218,23.48,6.051,ok
-G0RRM2,,Endo-chitosanase,False,True,ECO:0000256,RuleBase:RU361208,ECO:0000256_only,19,valid_annotated_coordinates,False,3.2.1.132,True,False,254,26.636,4.45,ok,235,24.752,4.429,ok
-G0RRP3,,"glucan endo-1,3-beta-D-glucosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,18,valid_annotated_coordinates,False,3.2.1.39,True,False,350,38.442,5.394,ok,332,36.748,5.397,ok
-G0RRQ0,,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,True,3.2.1.14,True,False,332,36.244,5.176,ok,313,34.276,4.967,ok
-G0RRS0,chi18-17,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,22,valid_annotated_coordinates,False,3.2.1.14,True,False,392,41.429,4.251,ok,370,39.244,4.187,ok
-G0RSA2,chi18-5,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,22,valid_annotated_coordinates,False,3.2.1.14,True,False,424,45.979,5.364,ok,402,43.729,5.251,ok
-G0RSR6,,"alpha,alpha-trehalase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,23,valid_annotated_coordinates,False,3.2.1.28,True,False,1079,116.641,6.407,ok,1056,114.307,6.317,ok
-G0RT37,chi18-9,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,27,valid_annotated_coordinates,False,3.2.1.14,True,False,1531,162.542,5.863,ok,1504,159.83,5.833,ok
-G0RT43,,Endo-chitosanase,False,True,ECO:0000256,RuleBase:RU361208,ECO:0000256_only,20,valid_annotated_coordinates,False,3.2.1.132,True,False,229,24.235,4.421,ok,209,22.177,4.421,ok
-G0RTT0,chi18-16,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,27,valid_annotated_coordinates,False,3.2.1.14,True,False,401,41.889,4.372,ok,374,39.121,4.128,ok
-G0RUP7,xyn2,"Endo-1,4-beta-xylanase 2",True,True,ECO:0000255,,ECO:0000255_only,19,valid_annotated_coordinates,False,3.2.1.8,True,False,223,24.069,7.867,ok,204,22.28,8.087,ok
-G0RUT8,,"Mannan endo-1,6-alpha-mannosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,22,valid_annotated_coordinates,True,3.2.1.101,True,False,461,49.728,4.827,ok,439,47.59,4.757,ok
-G0RV49,aguA,Alpha-glucuronidase,False,True,ECO:0000256,PIRNR:PIRNR029900; RuleBase:RU361198,ECO:0000256_only,19,valid_annotated_coordinates,False,3.2.1.139,True,False,847,93.423,6.412,ok,828,91.388,6.338,ok
-G0RV96,,Beta-mannosidase A,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,23,valid_annotated_coordinates,False,3.2.1.25,True,False,938,104.778,4.651,ok,915,102.442,4.591,ok
-G0RVI0,nag2,Beta-hexosaminidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,18,valid_annotated_coordinates,False,3.2.1.52,True,False,603,67.355,5.443,ok,585,65.614,5.386,ok
-G0RVN2,,alpha-galactosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,22,valid_annotated_coordinates,False,3.2.1.22,True,False,624,68.454,6.167,ok,602,66.326,6.033,ok
-G0RVQ8,,"glucan endo-1,6-beta-glucosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,18,valid_annotated_coordinates,False,3.2.1.75,True,False,476,51.577,5.988,ok,458,49.818,5.998,ok
-G0RVT1,,Alpha-galactosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,26,valid_annotated_coordinates,False,3.2.1.22,True,False,746,82.091,5.586,ok,720,79.517,5.469,ok
-G0RVZ9,chi18-14,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,27,valid_annotated_coordinates,False,3.2.1.14,True,False,411,42.561,4.394,ok,384,39.833,4.187,ok
-G0RWB1,,"galacturonan 1,4-alpha-galacturonidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,22,valid_annotated_coordinates,False,3.2.1.67,True,False,401,44.093,5.614,ok,379,41.797,5.733,ok
-G0RWI2,,Endo-chitosanase,False,True,ECO:0000256,RuleBase:RU361208,ECO:0000256_only,20,valid_annotated_coordinates,False,3.2.1.132,True,False,235,24.071,5.497,ok,215,22.135,5.209,ok
-G0RXC7,cel5b,Endoglucanase EG-II,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,False,3.2.1.4,True,False,438,46.855,4.32,ok,419,45.087,4.309,ok
-Q7Z9M8,cel74a,Xyloglucanase,True,True,ECO:0000255,,ECO:0000255_only,19,valid_annotated_coordinates,False,3.2.1.155,True,False,838,87.131,5.424,ok,819,85.204,5.174,ok
+uniprot_accession,gene_name,protein_name,reviewed,signal_peptide_annotated,signal_evidence_codes,signal_evidence_sources,signal_evidence_group,signal_end_aa,signal_location_status,transmembrane_annotated,tm_outside_signal_status,ec_numbers,glycosidase_ec_3_2_1,incomplete_ec_3_2_1,length_aa,calculated_mw_kda,calculated_pi,property_status,post_signal_length_aa,post_signal_mw_kda,post_signal_pi,post_signal_status
+G0R6S5,chi18-1,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,25,valid_annotated_coordinates,False,no_tm_feature,3.2.1.14,True,False,1377,146.509,4.68,ok,1352,144.038,4.664,ok
+G0R7M8,chi18-12,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,False,no_tm_feature,3.2.1.14,True,False,324,35.032,4.17,ok,305,33.24,4.17,ok
+G0R866,,Glucoamylase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,20,valid_annotated_coordinates,False,no_tm_feature,3.2.1.3,True,False,632,67.372,5.11,ok,612,65.368,4.978,ok
+G0R947,,"Endo-1,4-beta-xylanase 1",True,True,ECO:0000255,,ECO:0000255_only,19,valid_annotated_coordinates,False,no_tm_feature,3.2.1.8,True,False,229,24.583,5.003,ok,210,22.701,5.003,ok
+G0R949,,endo-polygalacturonase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,21,valid_annotated_coordinates,False,no_tm_feature,3.2.1.15,True,False,379,38.342,5.918,ok,358,36.187,5.507,ok
+G0R9G0,chi18-13,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,26,valid_annotated_coordinates,False,no_tm_feature,3.2.1.14,True,False,401,41.038,4.597,ok,375,38.354,4.423,ok
+G0RA32,xyn3,"Endo-1,4-beta-xylanase 3",True,True,ECO:0000255,,ECO:0000255_only,16,valid_annotated_coordinates,False,no_tm_feature,3.2.1.8,True,False,347,38.076,6.966,ok,331,36.453,6.593,ok
+G0RA39,,non-reducing end alpha-L-arabinofuranosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,26,valid_annotated_coordinates,False,no_tm_feature,3.2.1.55,True,False,510,53.127,5.691,ok,484,50.463,5.296,ok
+G0RA70,,alpha-galactosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,26,valid_annotated_coordinates,False,no_tm_feature,3.2.1.22,True,False,476,52.124,6.107,ok,450,49.573,5.787,ok
+G0RA73,,Alpha-galactosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,False,no_tm_feature,3.2.1.22,True,False,496,54.33,5.407,ok,477,52.281,5.324,ok
+G0RAJ4,,"N,O-diacetylmuramidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,20,valid_annotated_coordinates,False,no_tm_feature,3.2.1.17,True,False,228,24.265,5.87,ok,208,22.248,5.583,ok
+G0RB67,cel5a,Endoglucanase EG-II,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,21,valid_annotated_coordinates,False,no_tm_feature,3.2.1.4,True,False,418,44.154,4.955,ok,397,42.141,4.834,ok
+G0RBA1,chit18-11,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,18,valid_annotated_coordinates,False,no_tm_feature,3.2.1.14,True,False,376,41.485,4.636,ok,358,39.782,4.637,ok
+G0RC44,,Alpha-galactosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,27,valid_annotated_coordinates,False,no_tm_feature,3.2.1.22,True,False,444,48.535,5.067,ok,417,45.694,4.889,ok
+G0RC85,man5a,"Mannan endo-1,4-beta-mannosidase A",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,25,valid_annotated_coordinates,False,no_tm_feature,3.2.1.78,True,False,369,40.174,5.118,ok,344,37.725,4.881,ok
+G0RCS3,chi18-6,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,18,valid_annotated_coordinates,False,no_tm_feature,3.2.1.14,True,False,492,54.207,5.177,ok,474,52.269,5.068,ok
+G0RDP2,nag1,Beta-hexosaminidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,21,valid_annotated_coordinates,False,no_tm_feature,3.2.1.52,True,False,582,64.26,5.827,ok,561,62.164,5.743,ok
+G0RDY1,,beta-glucosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,False,no_tm_feature,3.2.1.21,True,False,781,84.681,5.317,ok,762,82.721,5.273,ok
+G0RE86,,"glucan endo-1,6-beta-glucosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,28,valid_annotated_coordinates,False,no_tm_feature,3.2.1.75,True,False,490,51.963,4.678,ok,462,49.115,4.521,ok
+G0REY3,,Alpha-L-arabinofuranosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,False,no_tm_feature,3.2.1.55,True,False,322,34.776,6.402,ok,303,32.832,6.462,ok
+G0RF07,,Beta-glucosidase cel3A,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,26,valid_annotated_coordinates,False,no_tm_feature,3.2.1.21,True,False,765,83.003,6.037,ok,739,80.402,6.041,ok
+G0RFP4,,beta-N-acetylhexosaminidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,16,valid_annotated_coordinates,False,no_tm_feature,3.2.1.52,True,False,684,74.344,5.779,ok,668,72.63,5.649,ok
+G0RFR8,,Alpha-amylase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,False,no_tm_feature,3.2.1.1,True,False,463,50.517,4.682,ok,444,48.367,4.585,ok
+G0RG23,,"xylan 1,4-beta-xylosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,20,valid_annotated_coordinates,False,no_tm_feature,3.2.1.37,True,False,797,87.19,5.524,ok,777,85.269,5.526,ok
+G0RG24,cel3a,Beta-glucosidase cel3A,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,False,no_tm_feature,3.2.1.21,True,False,744,78.432,6.382,ok,725,76.441,5.969,ok
+G0RG35,,alpha-galactosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,20,valid_annotated_coordinates,False,no_tm_feature,3.2.1.22,True,False,621,68.001,6.453,ok,601,66.073,6.437,ok
+G0RG36,,Beta-mannosidase A,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,17,valid_annotated_coordinates,False,no_tm_feature,3.2.1.25,True,False,927,104.831,5.707,ok,910,103.067,5.652,ok
+G0RGE0,,"glucan endo-1,3-alpha-glucosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,25,valid_annotated_coordinates,False,no_tm_feature,3.2.1.59,True,False,429,46.805,5.436,ok,404,44.318,5.432,ok
+G0RGK8,,alpha-glucosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,30,valid_annotated_coordinates,False,no_tm_feature,3.2.1.20,True,False,964,109.848,5.605,ok,934,106.644,5.539,ok
+G0RH14,,Exo-beta-D-glucosaminidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,18,valid_annotated_coordinates,False,no_tm_feature,3.2.1.165,True,False,892,99.427,5.862,ok,874,97.788,5.865,ok
+G0RHB8,chi18-15,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,25,valid_annotated_coordinates,False,no_tm_feature,3.2.1.14,True,False,343,36.182,4.815,ok,318,33.663,4.797,ok
+G0RHL2,,"glucan endo-1,3-beta-D-glucosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,18,valid_annotated_coordinates,False,no_tm_feature,3.2.1.39,True,False,863,92.095,6.004,ok,845,90.4,6.011,ok
+G0RHR0,,Mannosyl-oligosaccharide glucosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,20,valid_annotated_coordinates,False,no_tm_feature,3.2.1.106,True,False,815,92.204,5.062,ok,795,90.36,5.036,ok
+G0RJ07,cel3b,Beta-glucosidase cel3A,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,18,valid_annotated_coordinates,False,no_tm_feature,3.2.1.21,True,False,874,93.913,5.726,ok,856,92.154,5.725,ok
+G0RK71,,"mannan endo-1,4-beta-mannosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,23,valid_annotated_coordinates,False,no_tm_feature,3.2.1.78,True,False,481,51.355,5.382,ok,458,49.057,5.237,ok
+G0RKU0,chi18-4,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,22,valid_annotated_coordinates,False,no_tm_feature,3.2.1.14,True,False,393,44.174,4.8,ok,371,41.758,4.761,ok
+G0RME4,,"Mannan endo-1,6-alpha-mannosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,21,valid_annotated_coordinates,True,tm_annotation_outside_signal_region,3.2.1.101,True,False,460,49.429,5.054,ok,439,47.46,4.959,ok
+G0RMH1,,Probable beta-glucosidase btgE,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,False,no_tm_feature,3.2.1.21,True,False,554,56.908,4.721,ok,535,55.246,4.671,ok
+G0RN13,,"Mannan endo-1,6-alpha-mannosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,True,tm_annotation_outside_signal_region,3.2.1.101,True,False,463,50.793,5.104,ok,444,48.631,5.162,ok
+G0RN27,,"xylan 1,4-beta-xylosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,22,valid_annotated_coordinates,False,no_tm_feature,3.2.1.37,True,False,927,100.985,6.354,ok,905,98.588,6.183,ok
+G0RNW1,,"glucan endo-1,6-beta-glucosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,17,valid_annotated_coordinates,False,no_tm_feature,3.2.1.75,True,False,429,48.079,5.45,ok,412,46.345,5.344,ok
+G0RP66,,cellulase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,17,valid_annotated_coordinates,False,no_tm_feature,3.2.1.4,True,False,242,24.411,4.206,ok,225,22.799,4.063,ok
+G0RQ44,,Alpha-galactosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,18,valid_annotated_coordinates,False,no_tm_feature,3.2.1.22,True,False,496,54.902,5.395,ok,478,53.191,5.388,ok
+G0RQN9,,Beta-galactosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,20,valid_annotated_coordinates,False,no_tm_feature,3.2.1.23,True,False,1023,111.367,6.353,ok,1003,109.286,6.347,ok
+G0RRB2,,non-reducing end alpha-L-arabinofuranosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,21,valid_annotated_coordinates,False,no_tm_feature,3.2.1.55,True,False,500,51.115,6.051,ok,479,49.159,5.893,ok
+G0RRG0,,Trehalase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,25,valid_annotated_coordinates,False,no_tm_feature,3.2.1.28,True,False,686,76.901,6.296,ok,661,74.36,6.21,ok
+G0RRG8,cel12a,cellulase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,16,valid_annotated_coordinates,False,no_tm_feature,3.2.1.4,True,False,234,25.158,6.694,ok,218,23.48,6.051,ok
+G0RRM2,,Endo-chitosanase,False,True,ECO:0000256,RuleBase:RU361208,ECO:0000256_only,19,valid_annotated_coordinates,False,no_tm_feature,3.2.1.132,True,False,254,26.636,4.45,ok,235,24.752,4.429,ok
+G0RRP3,,"glucan endo-1,3-beta-D-glucosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,18,valid_annotated_coordinates,False,no_tm_feature,3.2.1.39,True,False,350,38.442,5.394,ok,332,36.748,5.397,ok
+G0RRQ0,,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,True,tm_annotation_outside_signal_region,3.2.1.14,True,False,332,36.244,5.176,ok,313,34.276,4.967,ok
+G0RRS0,chi18-17,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,22,valid_annotated_coordinates,False,no_tm_feature,3.2.1.14,True,False,392,41.429,4.251,ok,370,39.244,4.187,ok
+G0RSA2,chi18-5,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,22,valid_annotated_coordinates,False,no_tm_feature,3.2.1.14,True,False,424,45.979,5.364,ok,402,43.729,5.251,ok
+G0RSR6,,"alpha,alpha-trehalase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,23,valid_annotated_coordinates,False,no_tm_feature,3.2.1.28,True,False,1079,116.641,6.407,ok,1056,114.307,6.317,ok
+G0RT37,chi18-9,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,27,valid_annotated_coordinates,False,no_tm_feature,3.2.1.14,True,False,1531,162.542,5.863,ok,1504,159.83,5.833,ok
+G0RT43,,Endo-chitosanase,False,True,ECO:0000256,RuleBase:RU361208,ECO:0000256_only,20,valid_annotated_coordinates,False,no_tm_feature,3.2.1.132,True,False,229,24.235,4.421,ok,209,22.177,4.421,ok
+G0RTT0,chi18-16,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,27,valid_annotated_coordinates,False,no_tm_feature,3.2.1.14,True,False,401,41.889,4.372,ok,374,39.121,4.128,ok
+G0RUP7,xyn2,"Endo-1,4-beta-xylanase 2",True,True,ECO:0000255,,ECO:0000255_only,19,valid_annotated_coordinates,False,no_tm_feature,3.2.1.8,True,False,223,24.069,7.867,ok,204,22.28,8.087,ok
+G0RUT8,,"Mannan endo-1,6-alpha-mannosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,22,valid_annotated_coordinates,True,tm_annotation_outside_signal_region,3.2.1.101,True,False,461,49.728,4.827,ok,439,47.59,4.757,ok
+G0RV49,aguA,Alpha-glucuronidase,False,True,ECO:0000256,PIRNR:PIRNR029900; RuleBase:RU361198,ECO:0000256_only,19,valid_annotated_coordinates,False,no_tm_feature,3.2.1.139,True,False,847,93.423,6.412,ok,828,91.388,6.338,ok
+G0RV96,,Beta-mannosidase A,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,23,valid_annotated_coordinates,False,no_tm_feature,3.2.1.25,True,False,938,104.778,4.651,ok,915,102.442,4.591,ok
+G0RVI0,nag2,Beta-hexosaminidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,18,valid_annotated_coordinates,False,no_tm_feature,3.2.1.52,True,False,603,67.355,5.443,ok,585,65.614,5.386,ok
+G0RVN2,,alpha-galactosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,22,valid_annotated_coordinates,False,no_tm_feature,3.2.1.22,True,False,624,68.454,6.167,ok,602,66.326,6.033,ok
+G0RVQ8,,"glucan endo-1,6-beta-glucosidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,18,valid_annotated_coordinates,False,no_tm_feature,3.2.1.75,True,False,476,51.577,5.988,ok,458,49.818,5.998,ok
+G0RVT1,,Alpha-galactosidase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,26,valid_annotated_coordinates,False,no_tm_feature,3.2.1.22,True,False,746,82.091,5.586,ok,720,79.517,5.469,ok
+G0RVZ9,chi18-14,chitinase,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,27,valid_annotated_coordinates,False,no_tm_feature,3.2.1.14,True,False,411,42.561,4.394,ok,384,39.833,4.187,ok
+G0RWB1,,"galacturonan 1,4-alpha-galacturonidase",False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,22,valid_annotated_coordinates,False,no_tm_feature,3.2.1.67,True,False,401,44.093,5.614,ok,379,41.797,5.733,ok
+G0RWI2,,Endo-chitosanase,False,True,ECO:0000256,RuleBase:RU361208,ECO:0000256_only,20,valid_annotated_coordinates,False,no_tm_feature,3.2.1.132,True,False,235,24.071,5.497,ok,215,22.135,5.209,ok
+G0RXC7,cel5b,Endoglucanase EG-II,False,True,ECO:0000256,SAM:SignalP,ECO:0000256_only,19,valid_annotated_coordinates,False,no_tm_feature,3.2.1.4,True,False,438,46.855,4.32,ok,419,45.087,4.309,ok
+Q7Z9M8,cel74a,Xyloglucanase,True,True,ECO:0000255,,ECO:0000255_only,19,valid_annotated_coordinates,False,no_tm_feature,3.2.1.155,True,False,838,87.131,5.424,ok,819,85.204,5.174,ok

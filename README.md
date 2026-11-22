@@ -1,96 +1,109 @@
-# UniProt annotation screen of putative secreted glycosidases in *Trichoderma reesei*
+# Screening putative secreted glycosidases in *Trichoderma reesei*
 
-A Python/Biopython analysis of the public QM6a proteome. The aim is to identify proteins with **both** an annotated N-terminal `Signal` feature and a complete glycosidase EC number (`3.2.1.*`), inspect the strength of their annotation evidence, and calculate theoretical sequence properties.
+Python/Biopython analysis of the public QM6a proteome (`UP000008984`). I looked for proteins with both an annotated N-terminal signal peptide and a complete EC `3.2.1.*` number, then examined the evidence behind those annotations and calculated protein-sequence properties.
 
-This is an **annotation screen**, not experimental secretome profiling, enzyme activity testing, or an estimate of industrial production yield.
+**Scope:** a personal computational portfolio project based on public UniProt records. This is **not** an experimentally measured secretome, a CAZy-family classification, or a prediction of industrial enzyme yield.
 
-## Biological question and approach
+## Research question and method
 
-*Trichoderma reesei* is relevant to enzyme biotechnology. I used the public UniProtKB proteome of its QM6a reference strain (`UP000008984`, NCBI Taxonomy ID `431241`), rather than data from laboratory samples or a company's production strain.
+Can UniProtKB feature annotations produce a reproducible list of *potential* extracellular glycosidases, and what information is lost when only EC numbers and Signal features are used?
 
-The pipeline:
+The pipeline downloads the QM6a proteome using the UniProt REST API, checks accession uniqueness, extracts annotated Signal features and their evidence codes, and parses complete EC numbers with the pattern `3.2.1.<integer>`. It then uses Biopython to calculate theoretical molecular weight, protein length and pI from full-length sequences.
 
-1. Retrieves all UniProtKB records through the paginated REST API and saves the retrieval metadata.
-2. Reads `Signal` features, their evidence codes/sources, and structured EC annotations from JSON.
-3. Distinguishes **annotated Signal** from **no Signal annotation**. The second label is not equivalent to intracellular or non-secreted.
-4. Counts complete EC numbers matching `3.2.1.<integer>`; incomplete entries such as `3.2.1.-` are not counted as matches.
-5. Computes sequence length, theoretical molecular weight, and pI with Biopython from the complete precursor sequence.
-6. For records with usable N-terminal signal-region coordinates, separately computes properties of the **post-signal segment**. This is an approximation based on annotation, **not a verified mature protein sequence**.
-7. Creates descriptive figures and a ten-entry EC-diverse shortlist. The shortlist is not a performance ranking.
+For proteins with a usable N-terminal Signal feature, it also calculates properties **after removing the annotated signal region**. These are *post-signal sequences*, not experimentally verified mature proteins. Finally, it reports missing annotation, selects EC-diverse examples, checks named reference enzymes, and runs an exploratory distribution comparison.
 
-The EC rule defines an **EC-based glycosidase subset**, not a CAZy glycoside-hydrolase-family assignment. Some carbohydrate-active proteins will be missed.
+## Key findings
 
-## Results from the 22 November 2026 snapshot
+<!-- AUTO_RESULTS_BEGIN -->
+The table below is generated from the CSV outputs by `python src/audit_pipeline.py`.
+**Snapshot:** 2026-11-22T22:12:38.267306+00:00; UniProt release: 2026_04.  
 
-| Observation | Number |
+| Observation | Count |
 |---|---:|
-| UniProtKB proteome entries | 9,115 |
-| Entries with annotated Signal feature | 653 (7.16%) |
-| Entries without annotated Signal feature | 8,462 (92.84%) |
-| Entries with complete EC `3.2.1.*` | 108 |
-| Entries meeting both conditions | 69 |
-| Signal-annotated entries without an EC annotation | 506 |
-| Full-length MW/pI calculations completed | 9,114 |
-| Unsupported amino-acid sequence (`X`) | 1 |
+| UniProt entries | 9,115 |
+| Signal annotations | 653 (7.16%) |
+| No Signal annotation | 8,462 |
+| Complete EC `3.2.1.*` | 108 |
+| Signal + complete EC candidates | 69 |
+| Complete EC but no Signal annotation | 39 |
+| Entries with incomplete `3.2.1.-` annotation | 11 |
+| Full-length MW/pI calculated | 9,114 |
 
-Among full-length protein sequences, the median lengths were **391** versus **412** amino acids, and theoretical median pI values were **5.403** versus **6.366**, for Signal-annotated versus no-Signal-annotation groups. These are descriptive comparisons, not claims that secretion causes a pI difference.
+**Signal-feature evidence among the EC-selected candidates:**
 
-An important follow-up question is why **39 of the 108** complete EC-matched proteins have no annotated Signal feature. The current pipeline does not classify these as intracellular; missing annotation or alternative targeting are among the possibilities.
+| Evidence code category | Candidates |
+|---|---:|
+| `ECO:0000255_only` | 4 |
+| `ECO:0000256_only` | 65 |
+| **Reviewed UniProt entries among candidates** | **4** |
 
-### Evidence, IQR, post-signal properties and outliers
+The ECO:0000255 and ECO:0000256 groups describe sequence-model evidence
+(manual vs automatic assertions). When these are the only observed groups,
+**no experimental evidence codes were found in the extracted Signal features**;
+this does not assess all published experimental evidence.
 
-The **generated [detailed analysis report](results/analysis_report.md)** provides the observed evidence-code counts among the 69 candidates, reviewed-entry counts, group IQRs, post-signal-segment pI changes, the longest annotated protein, and examples of EC-matched proteins without Signal annotations. The source counts and provenance are also available as JSON in `results/analysis_details.json` and `results/metadata.json`.
+**Full-length sequence summaries (median and IQR):**
 
-`ECO:0000256` refers to a sequence-model match used in an automatic assertion; `ECO:0000255` is the corresponding type used in a manual assertion. Neither is experimental proof of protein secretion. Different codes, if present, need to be evaluated individually.
+| Annotation group | Valid pI | Median pI | pI IQR (Q1–Q3) | Median length (aa) | Length IQR (Q1–Q3) |
+|---|---:|---:|---|---:|---|
+| Signal annotated | 653 | 5.403 | 4.836–6.353 | 391.0 | 241.0–545.0 |
+| No Signal annotation | 8461 | 6.366 | 5.585–8.719 | 412.0 | 264.0–607.0 |
 
-### Shortlist
+**Exploratory two-sided Mann–Whitney U (full-length pI):** `U=1583906.5`, `p=5.82e-74`, rank-biserial effect `r=-0.4266` (positive values indicate higher ranks in the Signal-annotated group).
+The test compares distributions; it does not prove secretion or a causal difference.
 
-The pipeline selected ten representative proteins across distinct EC categories, including chitinase (`G0R6S5`), endoglucanase EG-II (`G0RB67`), beta-glucosidase cel3A (`G0RG24`), and xylanase 3 (`G0RA32`). The full ten-entry table, evidence codes, calculated properties and selection reasons are in [`results/candidate_shortlist.csv`](results/candidate_shortlist.csv). All 69 candidates are in [`results/candidates.csv`](results/candidates.csv).
+**After removal of the annotated signal segment:** 69 candidates had calculable theoretical pI; median post-signal minus full-length pI = **-0.074**. This is not a verified mature-protein measurement.
 
-Candidates are selected by EC-category diversity (categories ordered by frequency), with reviewed annotation status, name completeness and accession used as deterministic tie-breakers. No enzyme activity, secretion efficiency or commercial value is inferred.
+**TM check:** 4 candidate(s) have an annotated Transmembrane region extending beyond the Signal region. This is a possible membrane-association flag, not a secretion assay.
 
-## Figures
+**Sequence outlier:** `G0RTM6` has 20,873 residues; the predicted gene model was not independently validated.
+<!-- AUTO_RESULTS_END -->
 
-![Evidence types among candidates](figures/candidate_signal_evidence.png)
+**Interpretation.** `ECO:0000256` represents an automatic sequence-model assertion, whereas `ECO:0000255` is sequence-model evidence used in a manual assertion. These annotations do **not** demonstrate extracellular secretion experimentally. Likewise, lacking a Signal feature is not evidence that a protein is intracellular. The Mann–Whitney comparison is exploratory: a p-value is not a measure of biological importance or causation.
 
-![Theoretical full-length protein pI](figures/theoretical_pi_comparison.png)
+## Visualizations
 
-![Predicted pI change after removing the annotated Signal segment](figures/post_signal_pi_shift.png)
+![Signal annotation evidence groups](figures/candidate_signal_evidence.png)
 
-Other figures: [signal-annotation counts](figures/signal_annotation_fraction.png) and [full-length protein length](figures/protein_length_comparison.png). In boxplots, outliers are hidden visually; all valid data are included when computing quartiles. Default whiskers extend to 1.5 times the IQR.
+![Theoretical pI distributions](figures/full_length_pi_distribution.png)
 
-## Reproduce the analysis
+![Change in pI after removing annotated Signal region](figures/post_signal_pi_shift.png)
 
-Python 3 and the dependencies in `requirements.txt` are needed. Run these commands from the repository root:
+Supplementary plots: [protein length](figures/protein_length_comparison.png), [full-length pI boxplot](figures/theoretical_pi_comparison.png), and [Signal annotation counts](figures/signal_annotation_fraction.png). Boxplot whiskers extend to 1.5×IQR; individual outliers are hidden only in the boxplot display and remain in the underlying statistics.
+
+## Candidate selection and reference checks
+
+The primary filter is deliberately simple: an annotated Signal feature **and** a complete EC `3.2.1.*` number. The [full candidate table](results/candidates.csv) retains all matching records. A [ten-protein shortlist](results/candidate_shortlist.csv) illustrates different EC categories; it is **not** a ranking of catalytic activity or commercial potential.
+
+The [reference check](results/reference_check.csv) examines previously named proteins such as CBH I/Cel7A, CBH II/Cel6A, EG II/Cel5A and Xylanase II/Xyn2, with eIF5A as a comparison. The check searches supplied accession IDs or gene names; unresolved records are reported rather than assumed. Cel7A is an example of why strict EC filtering can miss a biologically interesting enzyme when the database lists an incomplete EC number. This small check is not a formal assessment of sensitivity or specificity.
+
+Of the EC-matched proteins lacking Signal annotation, the [separate table](results/ec_without_signal.csv) preserves all records for further investigation. We cannot infer their intracellular location from that missing annotation alone.
+
+## How to reproduce
+
+Use Python 3.11–3.14 and an Internet connection for the *first* download. From the project root:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-
-python src/fetch_proteome.py
-python src/parse_annotations.py
-python src/calculate_properties.py
-python src/select_candidates.py
-python src/make_figures.py
-python src/audit_pipeline.py
-python -m pytest tests/ -q
+bash run_pipeline.sh
 ```
 
-The full raw UniProt JSON (`data/proteome_records.json`) is not committed because it can be retrieved by the script. Results may change after UniProt updates; refer to `results/metadata.json` for the exact retrieval time and release, when reported by the API.
+The script uses the local `data/proteome_records.json` snapshot if present, otherwise retrieves it from UniProt; that raw, regenerable file is intentionally excluded from Git. To force a fresh retrieval, run `python src/fetch_proteome.py` before `bash run_pipeline.sh`.
 
-Unit tests use **synthetic** protein records and cover signal annotations, evidence categories, EC parsing, post-signal coordinates, sequence properties and shortlist logic. `src/audit_pipeline.py` performs an additional **data-driven consistency audit** and writes a reproducible report; passing tests is not equivalent to experimental validation.
+The reproducible report is [results/analysis_report.md](results/analysis_report.md), with machine-readable values in [analysis_details.json](results/analysis_details.json) and source version/date in [metadata.json](results/metadata.json). Results may change in later UniProt releases. Unit tests use small synthetic examples, and GitHub Actions runs those tests without requiring the raw proteome. The audit additionally checks source/CSV counts, unique accessions, selection criteria and candidate membership.
 
-## Limitations and decisions
+## Decisions and limitations
 
-I intentionally used UniProt feature annotations instead of presenting this work as a newly trained secretion predictor. This made the selection rule easy to inspect, but many annotations depend on computational evidence and can be incomplete or incorrect. A Signal annotation means targeting to a secretory pathway may be plausible, not that the protein was measured in culture supernatant. An absent Signal annotation is not a biological negative.
+I chose the public QM6a reference proteome because it can be fetched and reanalysed without access to proprietary strains or laboratory samples. I used the existing UniProt Signal annotations to keep the classification transparent rather than treating the project as a new signal-peptide predictor. EC `3.2.1.*` makes a clear, testable subset, but it is **not the same as a CAZy GH family assignment** and omits proteins with incomplete EC labels (and other carbohydrate-active enzymes).
 
-The post-signal calculation removes only the segment described by a usable annotated N-terminal `Signal` feature; it does not model propeptides, other processing, glycosylation or experimental cleavage. The theoretical pI and MW values also do not predict production titers. Very long sequences and uncertain gene models deserve external validation, which is outside the scope of this project.
+My initial comparison used full-length precursor proteins. I later added a separate post-signal calculation after noticing that signal peptides are usually cleaved; this still does not model additional processing, glycosylation or prove the true cleavage site. I also retained the extreme long-sequence record as an outlier rather than silently deleting it; its underlying gene model needs independent validation.
 
-A shortlist chosen for EC diversity should not be read as the ten best enzymes. A next step could compare known secreted enzymes against the screen and inspect proteins with uncertain Signal annotations, but I have not claimed to complete those analyses.
+Many Signal annotations are computationally inferred. Missing Signal annotation does not mean absent secretion, and no signal feature or EC annotation confirms enzyme activity, protein recovery from culture supernatant or industrial yield. The selected shortlist deliberately represents *annotation diversity*, not experimentally supported performance.
 
-## Authorship and tools
+## Authorship and sources
 
-This is a personal portfolio project using public data, not work commissioned by Picea or another company. **AI assistance was used to draft and revise parts of the Python code and documentation.** I executed the scripts on the dataset, reviewed their outputs and limitations, and kept checks and data provenance reproducible. The repository records the computational work, not independent laboratory experiments.
+**AI assistance** was used in drafting and revising parts of the scripts and documentation. I ran the pipeline on the UniProt data, checked the outputs, and reviewed the reported limitations. This project does not use my university laboratory samples.
 
-Data and software: [UniProtKB](https://www.uniprot.org/), [UniProt REST API](https://www.uniprot.org/api-documentation/uniprotkb), [UniProt signal annotation](https://www.uniprot.org/help/signal), [Biopython ProteinAnalysis](https://biopython.org/wiki/ProtParam), pandas, matplotlib, requests and pytest.
+Primary sources: [UniProtKB](https://www.uniprot.org/), [UniProtKB REST API](https://www.uniprot.org/api-documentation/uniprotkb), [UniProt Signal peptide help](https://www.uniprot.org/help/signal), [UniProt evidence explanation](https://www.ebi.ac.uk/training/online/courses/uniprot-exploring-protein-sequence-and-functional-info/where-does-the-data-come-from/data-evidence/), [Biopython ProtParam](https://biopython.org/wiki/ProtParam), and [SciPy Mann–Whitney U documentation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.mannwhitneyu.html).
