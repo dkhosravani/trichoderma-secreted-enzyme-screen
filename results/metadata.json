@@ -1,0 +1,9 @@
+{
+  "source": "UniProtKB",
+  "query": "proteome:UP000008984",
+  "downloaded_at_utc": "2026-11-22T22:12:38.267306+00:00",
+  "uniprot_release": "2026_04",
+  "expected_total": 9115,
+  "downloaded_count": 9115,
+  "pages": 19
+}

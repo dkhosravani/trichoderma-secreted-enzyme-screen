@@ -1,0 +1,5 @@
+biopython>=1.80,<2
+matplotlib>=3.7,<4
+pandas>=2.0,<4
+pytest>=8,<10
+requests>=2.31,<3

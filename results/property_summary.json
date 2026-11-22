@@ -1,0 +1,12 @@
+{
+  "total_proteins": 9115,
+  "properties_calculated": 9114,
+  "properties_skipped": 1,
+  "skip_reasons": {
+    "unsupported_residues:X": 1
+  },
+  "candidate_count": 69,
+  "candidates_with_properties": 69,
+  "post_signal_properties_calculated": 653,
+  "candidate_post_signal_properties_calculated": 69
+}

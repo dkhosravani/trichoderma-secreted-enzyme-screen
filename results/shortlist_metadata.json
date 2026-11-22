@@ -1,0 +1,8 @@
+{
+  "eligible_candidates": 69,
+  "distinct_ec_categories": 27,
+  "shortlist_count": 10,
+  "target_count": 10,
+  "selection_method": "EC diversity by category frequency, then review/name completeness and accession",
+  "not_an_activity_or_yield_ranking": true
+}

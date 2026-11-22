@@ -1,0 +1,11 @@
+{
+  "total_proteins": 9115,
+  "annotated_signal_peptide": 653,
+  "no_signal_peptide_annotation": 8462,
+  "glycosidase_ec_3_2_1": 108,
+  "signal_and_glycosidase": 69,
+  "glycosidase_without_signal_annotation": 39,
+  "signal_annotated_without_ec": 506,
+  "incomplete_ec_3_2_1_entries": 11,
+  "missing_sequences": 0
+}
