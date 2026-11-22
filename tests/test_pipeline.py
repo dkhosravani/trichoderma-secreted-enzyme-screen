@@ -143,3 +143,110 @@ def test_shortlist_distinct_categories():
 
 def test_percentile():
     assert percentile([1, 2, 3, 4, 5], .25) == 2
+
+# Added after the scientific review: distribution tests and reference recovery.
+from src.audit_pipeline import compare_distributions, group_stats, fmt_p
+from src.check_reference_enzymes import reference_results
+
+
+def test_mann_whitney_effect_sign():
+    result = compare_distributions([1, 2, 3], [8, 9, 10])
+    assert result['rank_biserial'] == -1
+    assert 0 <= result['p_value'] <= 1
+    assert result['n_signal'] == result['n_no_signal'] == 3
+
+
+def test_mann_whitney_reverse_direction():
+    assert compare_distributions([8, 9], [1, 2])['rank_biserial'] == 1
+
+
+def test_mann_whitney_empty_group():
+    result = compare_distributions([], [1, 2])
+    assert result['p_value'] is None and result['rank_biserial'] is None
+
+
+def test_iqr_with_missing_values():
+    result = group_stats([{'p': '1'}, {'p': '2'}, {'p': ''},
+                          {'p': '3'}, {'p': '4'}, {'p': '5'}], 'p')
+    assert result == {'n_valid': 5, 'median': 3, 'q1': 2, 'q3': 4}
+
+
+def test_uncertain_signal_coordinates_not_clipped():
+    feature = {'type': 'Signal', 'location': {
+        'start': {'value': 1}, 'end': {'value': 3, 'modifier': 'UNSURE'}}}
+    assert signal_cleavage_position([feature], 10)[0] == ''
+
+
+def test_reference_check_known_ec_incomplete():
+    row = shortlist_row('G0RVK1', '3.2.1.-')
+    row['glycosidase_ec_3_2_1'] = 'False'
+    row['gene_name'] = 'cel7a'
+    refs = [{'reference': 'CBH I', 'accession': 'G0RVK1', 'gene': 'cel7a',
+             'role': 'positive-reference'}]
+    results = reference_results([row], references=refs)
+    assert results[0]['match_status'] == 'matched'
+    assert results[0]['primary_screen_pass'] is False
+
+
+def test_reference_check_gene_search_and_missing():
+    row = shortlist_row('KNOWN', '3.2.1.4')
+    row['gene_name'] = 'cel6a'
+    refs = [
+        {'reference': 'CBH II', 'accession': '', 'gene': 'cel6a',
+         'role': 'positive-reference'},
+        {'reference': 'Other', 'accession': 'MISSING', 'gene': '',
+         'role': 'comparison'},
+    ]
+    checks = reference_results([row], refs)
+    assert checks[0]['accession'] == 'KNOWN' and checks[0]['primary_screen_pass']
+    assert checks[1]['match_status'] == 'not_found'
+
+
+def test_deterministic_shortlist_order():
+    rows = [shortlist_row('Z', '3.2.1.4'), shortlist_row('A', '3.2.1.4'),
+            shortlist_row('C', '3.2.1.8')]
+    first = select_shortlist(rows, target=2)[0]
+    second = select_shortlist(list(reversed(rows)), target=2)[0]
+    assert [(r['uniprot_accession'], r['representative_ec']) for r in first] == [
+        (r['uniprot_accession'], r['representative_ec']) for r in second]
+
+
+def test_p_value_formatter():
+    assert 'underflow' in fmt_p(0)
+    assert fmt_p(None) == 'not computed'
+
+
+def test_readme_auto_results_no_double_marker(tmp_path, monkeypatch):
+    from src import audit_pipeline
+    (tmp_path / 'README.md').write_text('Header\n' + audit_pipeline.START + '\nold\n'
+                                        + audit_pipeline.END + '\nFooter\n')
+    monkeypatch.setattr(audit_pipeline, 'ROOT', tmp_path)
+    audit_pipeline.update_readme_generated_section('new finding')
+    text = (tmp_path / 'README.md').read_text()
+    assert 'new finding' in text and 'old' not in text
+    assert text.count(audit_pipeline.START) == text.count(audit_pipeline.END) == 1
+
+
+def test_transmembrane_outside_signal_flag():
+    entry = record(signal=True)
+    entry['features'].append({'type': 'Transmembrane',
+                             'location': {'start': {'value': 6}, 'end': {'value': 9}}})
+    assert parse_record(entry)['tm_outside_signal_status'] == 'tm_annotation_outside_signal_region'
+
+
+def test_transmembrane_inside_signal_flag():
+    entry = record(signal=True)
+    entry['features'].append({'type': 'Transmembrane',
+                             'location': {'start': {'value': 1}, 'end': {'value': 2}}})
+    assert parse_record(entry)['tm_outside_signal_status'] == 'tm_features_within_signal_region'
+
+
+def test_qm6a_cbhii_reference_uses_accession_not_only_gene_name():
+    from src.check_reference_enzymes import REFERENCES
+    ref = next(r for r in REFERENCES if r['reference'].startswith('CBH II'))
+    assert ref['accession'] == 'G0RB58'
+    example = shortlist_row('G0RB58', '3.2.1.91')
+    example['gene_name'] = ''
+    checks = reference_results([example], references=[ref])
+    assert checks[0]['match_status'] == 'matched'
+    assert checks[0]['accession'] == 'G0RB58'

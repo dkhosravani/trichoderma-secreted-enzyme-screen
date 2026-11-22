@@ -61,13 +61,38 @@ def signal_cleavage_position(features, sequence_length):
     if len(signals) != 1:
         return '', 'multiple_signal_features'
     location = signals[0].get('location') or {}
-    start = (location.get('start') or {}).get('value')
-    end = (location.get('end') or {}).get('value')
+    start_location = location.get('start') or {}
+    end_location = location.get('end') or {}
+    start = start_location.get('value')
+    end = end_location.get('value')
+    if any(point.get('modifier') not in (None, 'EXACT') for point in
+           (start_location, end_location)):
+        return '', 'missing_or_uncertain_coordinates'
     if not isinstance(start, int) or not isinstance(end, int):
         return '', 'missing_or_uncertain_coordinates'
     if start != 1 or not 1 <= end < sequence_length:
         return '', 'non_nt_or_out_of_range'
     return end, 'valid_annotated_coordinates'
+
+
+def transmembrane_outside_signal_status(features, signal_end):
+    """Flag TM annotation beyond annotated signal; not a secretion predictor."""
+    tm = [f for f in features if f.get('type') == 'Transmembrane']
+    if not tm:
+        return 'no_tm_feature'
+    if not isinstance(signal_end, int):
+        return 'signal_coordinates_unknown'
+    unknown = False
+    for feature in tm:
+        location = feature.get('location') or {}
+        start = (location.get('start') or {}).get('value')
+        end = (location.get('end') or {}).get('value')
+        if not isinstance(start, int) or not isinstance(end, int):
+            unknown = True
+            continue
+        if end > signal_end:
+            return 'tm_annotation_outside_signal_region'
+    return 'tm_coordinates_unknown' if unknown else 'tm_features_within_signal_region'
 
 
 def parse_record(record):
@@ -106,6 +131,7 @@ def parse_record(record):
         'signal_end_aa': cleavage_end,
         'signal_location_status': cleavage_status,
         'transmembrane_annotated': any(f.get('type') == 'Transmembrane' for f in features),
+        'tm_outside_signal_status': transmembrane_outside_signal_status(features, cleavage_end),
         'ec_numbers': '; '.join(ec),
         'glycosidase_ec_3_2_1': any(EC_GLYCOSIDASE.fullmatch(number) for number in ec),
         'incomplete_ec_3_2_1': '3.2.1.-' in ec,
